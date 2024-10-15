@@ -21,7 +21,7 @@ npm install -g https://github.com/Antoniozinchenko/jgh
 
 ## Commands
 
-When you start working on a new issue, just run `jgh start` or `jgh st` for creating a new branch with issue key
+When you start working on a new issue, just run `jgh start` or `jgh st` for creating a new branch based on jira ticket from backlog
 ```bash
 $ jgh start
 ```
