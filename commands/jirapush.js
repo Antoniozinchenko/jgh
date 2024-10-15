@@ -1,6 +1,6 @@
 import { runCommand } from "./run_command.js";
-import { jiracommit } from "./commands/jiracommit.js";
-import { jirareview } from "./commands/jirareview.js";
+import { jiracommit } from "./jiracommit.js";
+import { jirareview } from "./jirareview.js";
 
 // Commit changes, push to the remote repository, and create a pull request
 export function jirapush(review = false) {
