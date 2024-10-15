@@ -14,6 +14,10 @@ export JIRA_API_TOKEN=<YOUR_API_TOKEN_HERE>
 # example: https://yourcompany.atlassian.net - your domain should is 'yourcompany'
 export JIRA_DOMAIN=<YOUR_JIRA_DOMAIN> 
 ```
+Install npm package globally 
+```bash
+npm install -g https://github.com/Antoniozinchenko/jgh
+```
 
 ## Commands
 
