@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { jiracheckout } from "./commands/jiracheckout.js";
+import { jirapush } from "./commands/jirapush.js";
 import { jirastart } from "./commands/jirastart.js";
 
 const args = process.argv.slice(2);
@@ -29,7 +30,7 @@ if (args.length === 0) {
       jiracheckout();
       break;
     case "push":
-      jiraPush(args[1] === "--review" || args[1] === "-r");
+      jirapush(args[1] === "--review" || args[1] === "-r");
       break;
     default:
       console.log(`Command not found: ${command}`);
