@@ -1,0 +1,11 @@
+{
+  "name": "jira_github",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "jgh": "index.js"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0"
+  }
+}
