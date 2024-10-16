@@ -7,7 +7,7 @@ export async function jirastart() {
     `jira issue list -s "Backlog" "Selected for development" -a$(jira me) --order-by rank --plain`,
   );
   if (!result) {
-    return;
+    process.exit(1);
   }
 
   const rows = result.split("\n");
@@ -25,7 +25,7 @@ export async function jirastart() {
 
   if (issues.length === 0) {
     console.log("No issues found in progress");
-    return;
+    process.exit(1);
   } else {
     const answer = await select({
       message: "Select an issue from backlog and move it to 'in progress'",

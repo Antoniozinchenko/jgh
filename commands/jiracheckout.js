@@ -7,7 +7,7 @@ export async function jiracheckout() {
     `jira issue list -s "In Progress" -a$(jira me) --plain`,
   );
   if (!result) {
-    return;
+    process.exit(1);
   }
 
   const rows = result.split("\n");
@@ -25,7 +25,10 @@ export async function jiracheckout() {
 
   if (issues.length === 0) {
     console.log("No issues found in progress");
-    return;
+    process.exit(1);
+  } else if (issues.length === 1) {
+    const issue = issues[0].value;
+    runCommand(`git checkout ${issue} || git checkout -b ${issue}`);
   } else {
     const answer = await select({
       message: "Select an active issue to checkout",
