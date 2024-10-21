@@ -15,7 +15,8 @@ export function jirapush(review = false) {
   runCommand(`git push -u origin ${branch}`);
   const prTitle = runCommand("git log -1 --pretty=%B");
   const prUrl = `https://${domain}.atlassian.net/browse/${branch}`;
-  runCommand(`gh pr create --title "${prTitle}" --body "${prUrl}"`);
+  const ghResult = runCommand(`gh pr create --title "${prTitle}" --body "${prUrl}"`);
+  console.log(ghResult);
 
   if (review) {
     jirareview();

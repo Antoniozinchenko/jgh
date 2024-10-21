@@ -7,5 +7,6 @@ export function jirareview() {
     process.exit(1);
   };
 
-  runCommand(`jira issue move ${branch} "OH to Test"`);
+  const result = runCommand(`jira issue move ${branch} "OH to Test"`);
+  console.log(result);
 }
